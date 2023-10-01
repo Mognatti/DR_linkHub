@@ -1,3 +1,4 @@
+import useWindowSize from "../../hooks/useWindowSize";
 import * as S from "./styles";
 
 export default function Main() {
@@ -24,6 +25,7 @@ export default function Main() {
       icon: <S.WhatsappIcon size="20" />,
     },
   ];
+  const [{ windowSize }] = useWindowSize();
 
   return (
     <S.Container>
@@ -46,7 +48,10 @@ export default function Main() {
           ))}
         </S.List>
       </S.CardContent>
-      <S.BackGround src="/bg.jpg" alt="" />
+      <S.BackGround
+        src={windowSize > 420 ? "/bg.jpg" : "/bg_mobile.png"}
+        alt=""
+      />
     </S.Container>
   );
 }

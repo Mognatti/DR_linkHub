@@ -106,5 +106,6 @@ export const BackGround = styled.img`
   height: 100vh;
   @media (max-width: 470px) {
     width: 101vw;
+    height: 101vh;
   }
 `;
