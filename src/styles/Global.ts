@@ -4,7 +4,9 @@ export const Global = createGlobalStyle`
 html {
     padding: 0;
     margin: 0;
-    height: 100vh;
+    @media (max-width: 450px) {
+        height: 100vh;
+    }
 }
 body{
 margin: 0;
