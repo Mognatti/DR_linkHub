@@ -9,6 +9,9 @@ export const Container = styled.div`
   width: 99vw;
   align-items: center;
   justify-content: center;
+  @media (max-width: 470px) {
+    justify-content: flex-start;
+  }
 `;
 
 export const CardContent = styled.div`
@@ -25,6 +28,8 @@ export const CardContent = styled.div`
   gap: 3vh;
   @media (max-width: 470px) {
     width: 300px;
+    background: none;
+    gap: 8vh 0;
   }
 `;
 
@@ -33,15 +38,39 @@ export const Header = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 16px 0;
+  margin-top: 5vh;
+`;
+
+export const HeaderTextContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vh;
+  @media (max-width: 470px) {
+    margin-top: -8px;
+    padding: 16px;
+    width: 104.5%;
+  }
+`;
+
+export const HeaderTitle = styled.p`
+  font-size: 1.4em;
+  margin: 1vh 0 2vh 0;
 `;
 
 export const ProfileImage = styled.img`
   width: 150px;
   border-radius: 50%;
+  z-index: 10;
+  @media (max-width: 470px) {
+    outline: 4px solid #242424;
+  }
 `;
 
-export const HeaderContent = styled.p`
+export const HeaderSubtitle = styled.p`
   margin: 0;
+  font-size: 1.1em;
   @media (max-width: 470px) {
     text-align: center;
     width: 350px;
@@ -75,11 +104,11 @@ export const Button = styled.button`
 
 export const WhatsappIcon = styled(FaWhatsapp)`
   color: #075e54;
-  margin-left: -80px;
-  margin-right: 80px;
+  margin-left: -88px;
+  margin-right: 88px;
   @media (max-width: 470px) {
-    margin-left: -30px;
-    margin-right: 30px;
+    margin-left: -35px;
+    margin-right: 35px;
   }
 `;
 
@@ -95,8 +124,12 @@ export const InstagramIcon = styled(FaInstagram)`
 
 export const WebsiteIcon = styled(BiWorld)`
   color: ${(props) => props.theme.colors.secondary};
-  margin-left: -105px;
-  margin-right: 105px;
+  margin-left: -113px;
+  margin-right: 110px;
+  @media (max-width: 470px) {
+    margin-left: -60px;
+    margin-right: 60px;
+  }
 `;
 
 export const BackGround = styled.img`
@@ -106,6 +139,6 @@ export const BackGround = styled.img`
   height: 100vh;
   @media (max-width: 470px) {
     width: 101vw;
-    height: 101vh;
+    height: 100vh;
   }
 `;

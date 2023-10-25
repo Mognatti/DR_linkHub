@@ -3,24 +3,24 @@ import * as S from "./styles";
 
 export default function Main() {
   const links = [
-    // {
-    //   id: 1,
-    //   name: "Site",
-    //   label: "Acesse meu site",
-    //   link: "https://www.instagram.com/diegorenatopersonal/",
-    //   icon: <S.WebsiteIcon size="20" />,
-    // },
+    {
+      id: 1,
+      name: "Site",
+      label: "Acesse meu site",
+      link: "http://bit.ly/diegorenatopersonal",
+      icon: <S.WebsiteIcon size="20" />,
+    },
     {
       id: 2,
       name: "Instagram",
-      label: "@diegorenatopersonal",
+      label: "Conheça meu instagram",
       link: "https://www.instagram.com/diegorenatopersonal/",
       icon: <S.InstagramIcon size="20" />,
     },
     {
       id: 3,
       name: "Whatsapp",
-      label: "Entre em contato comigo!",
+      label: "Entre em contato comigo",
       link: "https://www.bit.ly/casa_da_vovo_diego",
       icon: <S.WhatsappIcon size="20" />,
     },
@@ -32,10 +32,12 @@ export default function Main() {
       <S.CardContent>
         <S.Header>
           <S.ProfileImage src="/profile_closer.jpg" />
-          <p>Diego Renato Personal</p>
-          <S.HeaderContent>
-            Especialista em treinamento personalizado
-          </S.HeaderContent>
+          <S.HeaderTextContent>
+            <S.HeaderTitle>Diego Renato Personal</S.HeaderTitle>
+            <S.HeaderSubtitle>
+              Especialista em treinamento personalizado
+            </S.HeaderSubtitle>
+          </S.HeaderTextContent>
         </S.Header>
         <S.List>
           {links.map((link) => (
@@ -49,7 +51,7 @@ export default function Main() {
         </S.List>
       </S.CardContent>
       <S.BackGround
-        src={windowSize > 420 ? "/bg.jpg" : "/bg_mobile.png"}
+        src={windowSize > 430 ? "/bg.jpg" : "/bg_mobile.png"}
         alt=""
       />
     </S.Container>
